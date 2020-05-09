@@ -25,7 +25,7 @@ SECRET_KEY = 'mc9obik)*d7_93py5g0%ha)3&)1r88-sea68cgl(bwzhmxt07x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
 
-ALLOWED_HOSTS = ['paintyourblues.herokuapp.com']
+ALLOWED_HOSTS = ['paintyourblues.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
