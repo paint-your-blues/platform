@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mc9obik)*d7_93py5g0%ha)3&)1r88-sea68cgl(bwzhmxt07x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['paintyourblues.herokuapp.com']
 
 
 # Application definition
