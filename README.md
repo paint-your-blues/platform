@@ -7,6 +7,13 @@ Django backend server for hosting paint-your-blues website.
   * Base html is the common element for all webpages. eg: links, meta tags, navbar etc
   * home.html is the homepage html file.
     * css imported from static folder
+    
+## Getting started
+1. Create a virtual env if you want to isolate the app python packages.
+2. Run ```pip install -r /path/to/requirements.txt```
+3. Run python manage.py runserver
+4. Open given localhost
+
 ## Contributors :sparkles:
 <table>
 <tr>
