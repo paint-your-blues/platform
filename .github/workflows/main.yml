@@ -1,7 +1,7 @@
 on: [push, pull_request]
 
 jobs:
-  readme-contibute automation:
+  contrib-readme-job:
     runs-on: ubuntu-latest
     name: A job to automate contrib in readme
     steps:
