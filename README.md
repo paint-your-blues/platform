@@ -7,3 +7,15 @@ Django backend server for hosting paint-your-blues website.
   * Base html is the common element for all webpages. eg: links, meta tags, navbar etc
   * home.html is the homepage html file.
     * css imported from static folder
+## Contributors :sparkles:
+<table>
+<tr>
+                <td align="center">
+                    <a href="https://github.com/akhilmhdh">
+                        <img src="https://avatars1.githubusercontent.com/u/31166322?v=4" width="100;" alt="akhilmhdh"/>
+                        <br />
+                        <sub><b>Akhil Mohan</b></sub>
+                    </a>
+                </td></tr>
+</table>
+
