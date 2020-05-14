@@ -1,0 +1,380 @@
+{% extends 'details/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container message-container mb-4">
+        <div class="row mb-3 row-reverse-lg">
+            <div class="col-1"></div>
+            <div class="col-3" style="text-align:right;">
+                <img class="img-fluid mb-2 sm-img" src={% static "details/assets/announcement.png" %} alt="announcement">
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <img class="img-fluid sm-hero" src={% static "details/assets/paint.png" %} alt="paint-your-blue">
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-1">
+                <img class="img-fluid rotated-arrow" src={% static "details/assets/rotated_1.svg" %} alt="learn-more">
+            </div>
+            <div class="col-5">
+                <div class="lead-para sm-hero">
+                    do you believe in the power of art to heal, shift moods, shape opinions, silence stigma and spur movements?
+                </div>
+            </div>
+        </div>
+        <div class="col-8 p-0 illustration-container">
+            <img class="img-fluid" src={% static "details/assets/illustration-man.png" %} alt="man">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-reverse-lg">
+            <div class="col-1"></div>
+            <div class="col-1">
+                <img src={% static "details/assets/rotated_2.svg" %} alt="themes" class="rotated-arrow">
+            </div>
+            <div class="col-5">
+                <p class="paragraph-main paragraph-big mt-0">
+                    <span class="text-weight-bold">PaintYourBlues</span> - an initiative by Suicide Prevention India
+                    Foundation, is a poster campaign to create awareness on key aspects of mental health in our society.
+                    we invite artists and designers around to globe to use graphic poster art as medium to spread
+                    awareness on mental health related issues. all selected posters from the campaign will be made
+                    available for non-commercial use as an open source repository under <a
+                        href="https://creativecommons.org/licenses/by-nc/4.0/"
+                        class="text-weight-bold text-green underline-on-hover" target="_blank">Creative Commons
+                        Attribution-NonCommercial 4.0 International.</a>
+                </p>
+                <button class="btn btn-green mb-4" onclick="scrollToGuidelines()">view guidelines</button>
+                <!-- <button class="btn btn-light">view entries</button> -->
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <div class="separator-bold mb-3"></div>
+                <h5 class="m-0">
+                    entries open from
+                </h5>
+                <h4 class="text-orange m-0">
+                    may 10 - jun 5
+                </h4>
+                <div class="separator-light my-3"></div>
+                <h5 class="m-0">
+                    voting open from
+                </h5>
+                <h4 class="text-orange m-0">
+                    jun 7 - jun 20
+                </h4>
+                <div class="separator-light my-3"></div>
+                <h5 class="m-0">
+                    prize
+                </h5>
+                <h4 class="text-orange mt-0 mb-2">
+                    ₹ 10,000
+                </h4>
+                <div class="mb-4">
+                    Each for 6 top entries - 3 selected by a curation panel and 3 selected through community voting on
+                    instagram.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme-->
+    <div class="banner-bg1 mt-3"></div>
+    <div class="banner-bg2">
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <h2 class="text-smoke mb-3 mt-0">
+                        themes
+                    </h2>
+                    <div class="text-smoke lead-para" style="opacity:0.7;">
+                        all entries should be based on the main theme of mental health and society, with the clear focus
+                        on
+                        one of the three themes mentioned here.
+                    </div>
+                    <br><br>
+                </div>
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col-2 show-on-desktop" style="text-align:right;">
+                            <span class="theme-number">01</span>
+                        </div>
+                        <div class="col-10">
+                            <h4 class="text-orange mb-3 mt-0">
+                                self care
+                            </h4>
+                            <div class="row">
+                                <div class="text-smoke col-6 paragraph-main mb-3">
+                                    refers to the thoughts, actions and behaviour of an individual to take control and
+                                    care of their
+                                    mental health leading to better well-being outcomes.
+                                </div>
+                                <div class="text-smoke col-6 paragraph-small mb-3">
+                                    in practice: <span class="text-smoke text-lighten">
+                                        getting 6-8 hrs of sleep, cultivating a hobby, being spiritual, exercising,
+                                        meditating,
+                                        being self-compassionate, setting aside me-time, and learning how to say no.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 show-on-desktop pt-5" style="text-align:right;">
+                            <span class="theme-number">02</span>
+                        </div>
+                        <div class="col-10">
+                            <h4 class="text-orange pt-5 mb-3 mt-0">
+                                peer-to-peer support
+                            </h4>
+                            <div class="row">
+                                <div class="text-smoke col-6 paragraph-main mb-3">
+                                    refers to the process of providing and receiving emotional support, from friends,
+                                    family,
+                                    colleagues and the larger community when distressed.
+                                </div>
+                                <div class="text-smoke col-6 paragraph-small mb-3">
+                                    in practice: <span class="text-smoke text-lighten">
+                                        includes staying socially connected, being part of interest-based communities
+                                        (running,
+                                        buddhist chanting, reading, movies, mental health), and creating spaces that
+                                        promote
+                                        well-being.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 pt-5 show-on-desktop" style="text-align:right;">
+                            <span class="theme-number">03</span>
+                        </div>
+                        <div class="col-10">
+                            <h4 class="text-orange pt-5 mb-3 mt-0">
+                                seeking professional help
+                            </h4>
+                            <div class="row">
+                                <div class="text-smoke col-6 paragraph-main mb-3">
+                                    just like visiting a dentist for a clean-up or an orthopedic when you break a bone,
+                                    seeking help
+                                    from a psychiatrist or therapist helps in diagnosis and treatment of mental
+                                    health-related
+                                    issues.
+                                </div>
+                                <div class="text-smoke col-6 paragraph-small mb-3">
+                                    in practice: <span class="text-smoke text-lighten">
+                                        reaching out to a mental health professional to address past traumas or while
+                                        experiencing
+                                        emotional distress in the present before it reaches a crisis point.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-bg3"></div>
+
+    <!-- Guidelines -->
+
+    <div class="container my-5 py-4" id="guidelinesSection">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-1">
+                <img src={% static "details/assets/rotated_3.svg" %} alt="submissions" class="rotated-arrow">
+            </div>
+            <div class="col-9">
+                <h2 class="mt-0 mb-4">
+                    guidelines <br> for submission
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <img src={% static "details/assets/rabbit.png" %} class="img-fluid show-on-desktop" alt="rabbit">
+            </div>
+            <div class="col-6">
+                <h4 class="mt-0 mb-3 text-orange">
+                    content
+                </h4>
+                <p class="mt-0 paragraph-main">
+                    do not use assets, fonts or artworks that are copyright protected in your submissions. this includes
+                    art/icons that are free to download, but requires crediting the original author who created it.
+                    <br><br>
+                    there’s no limit to the number of posters that can be submitted per individual. however, each entry
+                    should be made as separate submissions.
+                </p>
+                <h4 class="mt-0 mb-3 text-orange">
+                    preparing canvas
+                </h4>
+                <p class="mt-0 paragraph-main">
+                    posters should be made in portrait layout (4:5 aspect ratio) and in RGB color mode. you are free to
+                    create non-digital canvas such as a painted poster or a doodle, but make sure the above proportion
+                    is kept and the final entry is a digitized file.
+                    <br><br>
+                    posters should be submitted in 150dpi and with a minimum resolution of 1080 by 1350px. while sending
+                    entries via email, make sure the attachment size is not more than 5mb.
+                    <br><br>
+                    final submissions via email should be in JPG, PNG or PDF format.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Making submissions -->
+
+    <div class="container my-5 py-4">
+        <div class="row mb-4">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <h2 class="m-0">
+                    making submissions
+                </h2>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-2 flex align-items-end">
+                <!-- <button class="btn btn-green">view entries</button> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4 flex-col">
+                <h4 class="mt-0 mb-3 text-orange">
+                    step 1
+                </h4>
+                <div class="making-submissions-box flex-grow-1 paragraph-main">
+                    send the posters in high resolution to <a class="text-orange underline-on-hover"
+                        href="http://paintyourblues.spif.in/" target="_blank">paintyourblues@spif.in</a> with
+                    the subject PaintYourBlues by your instagram username.
+                    <br><br>
+                    don’t forget to mention your name, instagram username and contact number in the mail body.
+                    <br><br>
+                    if you are sending multiple entries, mail them separately. keep the attachment size below 5mb.
+                </div>
+                <br>
+            </div>
+            <div class="col-6 flex-col">
+                <h4 class="mt-0 mb-3 text-orange">
+                    step 2
+                </h4>
+                <div class="making-submissions-box flex-grow-1 paragraph-main">
+                    publish the poster on your instagram account and tag <a class="text-orange underline-on-hover"
+                        href="https://www.instagram.com/paintyourblues/" target="_blank">@paintyourblues</a>. add the
+                    hashtag #PaintYourBlues in the post description. when submitting multiple entries, make them as
+                    individual posts. avoid creating
+                    carousal posts, we will only consider the first image as the entry.
+                    <br><br>
+                    your instagram profile should not be private while posting. we will be able to repost for voting
+                    from only public profiles.
+                    <br><br>
+                    you must tag us on the picture, and not just mention on the picture description. this is important
+                    for us to get informed about your submission and track.
+                    <br><br>
+                    do not publish your entries as stories. submit them as posts.
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+
+    <div class="container my-4 py-4">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-1">
+                <img src={% static "details/assets/rotated_4.svg" %} alt="paintyourblues" class="rotated-arrow">
+            </div>
+            <div class="col-9">
+                <h2 class="mt-0 mb-4">
+                    faqs
+                </h2>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>can i send you a painting?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    short answer - NO! but yes, we know some of you prefer to work with the feel of the pencil in your
+                    hand and smell the fresh paint. there are no restrictions on how you can create the artwork for the
+                    poster. all we need is a well-scanned digital version of it as per the guidelines mentioned. so YES,
+                    you may paint, create a paper collage, or do a doodle. we don't mind as long as it is relevant to
+                    the theme at hand and can be used as a poster.
+                </p>
+                <br>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>what is a poster?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    a poster is primarily a mass communication medium. they are designed to both eye-catchy and
+                    informative and convey a core idea through combining graphics and text. however, there have been
+                    plenty of cases where the central idea has been conveyed with just text of graphics. our screening
+                    of entries that qualify for shortlisting for voting will be primarily based on how well they
+                    communicate the themes mentioned to the public.
+                </p>
+                <br>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>can i do a poster in hindi?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    NO. as a global public service campaign, we urge everyone to create the posters in english and not
+                    in any other language. however, you may use non-english scripts for ornamental/graphic purposes as
+                    part of your artwork, as long as the core communication for the poster is not dependent on it.
+                </p>
+                <br>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>can i send more than one entry?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    yes. there is no limit to the number of entries you can send. but make sure to post them as individual posts on instagram. also send them as individual emails.
+                </p>
+                <br>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>can i send in the entries by just email and avoid Instagram?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    the community voting happens through Instagram's likes. so it is essential that you publish entries on Instagram so that we can repost them for voting on our profile. ofcource, we can post it on your behalf, but that is prone to errors and we are a small team, and would really wish to avoid the overheads in tracking this. so we really request you to consider posting on Instagram as well as sending via email.
+                </p>
+                <br>
+                <h4 class="m-0 accordion">
+                    <i class="fa fa-caret-right mr-3 text-orange"></i>is it ok if i mention @paintyourblues in post or comment when posting?
+                </h4>
+                <p class="faq-ans paragraph-main pt-2">
+                    no. for us to track your entries properly, we request you to use the "Tag" feature of Instagram, and not just mentioning us on the comments or in post description.
+                </p>
+                <br>
+                <h4 class="m-0">
+                    <span class="text-weight-normal">more questions? mail </span><a class="text-weight-bold text-green"
+                        href="http://paintyourblues.spif.in/" target="_blank">paintyourblues@spif.in</a>
+                </h4>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="https://www.instagram.com/paintyourblues/" target="_blank">
+                <button class="btn btn-green">view campaign on instagram</button>
+            </a>
+            <p class="paragraph small paragraph-big">
+                and don’t forget to share the love!
+            </p>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
+                target="_blank"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                class="mx-2">
+                <button class="btn btn-light btn-sharing">
+                    <i class="fa fa-twitter fa-fw text-green fa-lg"></i>
+                </button>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaintyourblues.com" target="_blank"
+                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                class="mx-2">
+                <button class="btn btn-light btn-sharing">
+                    <i class="fa fa-facebook fa-fw text-green fa-lg"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}

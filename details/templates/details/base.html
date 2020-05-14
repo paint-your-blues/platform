@@ -1,20 +1,137 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Paint Your Blues</title>
-    
-    <link rel="stylesheet" href={% static 'details/styles/aether.css' %}>
-    <link rel="stylesheet" href={% static 'details/styles/styles.css' %}>
+    <link rel="apple-touch-icon" sizes="57x57" href={% static "details/details/assets/favicon/apple-icon-57x57.png" %}>
+    <link rel="apple-touch-icon" sizes="60x60" href={% static "details/assets/favicon/apple-icon-60x60.png" %}>
+    <link rel="apple-touch-icon" sizes="72x72" href={% static "details/assets/favicon/apple-icon-72x72.png" %}>
+    <link rel="apple-touch-icon" sizes="76x76" href={% static "details/assets/favicon/apple-icon-76x76.png" %}>
+    <link rel="apple-touch-icon" sizes="114x114" href={% static "details/assets/favicon/apple-icon-114x114.png" %}>
+    <link rel="apple-touch-icon" sizes="120x120" href={% static "details/assets/favicon/apple-icon-120x120.png" %}>
+    <link rel="apple-touch-icon" sizes="144x144" href={% static "details/assets/favicon/apple-icon-144x144.png" %}>
+    <link rel="apple-touch-icon" sizes="152x152" href={% static "details/assets/favicon/apple-icon-152x152.png" %}>
+    <link rel="apple-touch-icon" sizes="180x180" href={% static "details/assets/favicon/apple-icon-180x180.png" %}>
+    <link rel="icon" type="image/png" sizes="192x192"  href={% static "details/assets/favicon/android-icon-192x192.png" %}>
+    <link rel="icon" type="image/png" sizes="32x32" href={% static "details/assets/favicon/favicon-32x32.png" %}>
+    <link rel="icon" type="image/png" sizes="96x96" href={% static "details/assets/favicon/favicon-96x96.png" %}>
+    <link rel="icon" type="image/png" sizes="16x16" href={% static "details/assets/favicon/favicon-16x16.png" %}>
+    <link rel="manifest" href={% static "details/assets/favicon/manifest.json" %}>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content={% static "details/assets/favicon/ms-icon-144x144.png" %}>
+    <meta name="theme-color" content="#ffffff">
+
+    <title>PaintYourBlues - Make art that can heal the mind!</title>
+    <meta name="description"
+        content="A poster campaign to create awareness on mental health. Contribute towards building an Open Source Graphic Library for global distribution." />
+
+    <!-- Open-graph meta -->
+    <meta property="og:title" content="PaintYourBlues - Make art that can heal the mind!">
+    <meta property="og:description"
+        content="A poster campaign to create awareness on mental health. Contribute towards building an Open Source Graphic Library for global distribution.">
+    <meta property="og:image" content="https://paintyourblues.com/details/assets/meta.jpg">
+    <meta property="og:url" content="https://paintyourblues.com">
+    <meta property="og:site_name" content="PaintYourBlues">
+
+    <!-- Twitter meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="PaintYourBlues">
+
+    <link rel="stylesheet" href={% static "details/styles/grid.css" %}>
+    <link rel="stylesheet" href={% static "details/styles/typo.css" %}>
+    <link rel="stylesheet" href={% static "details/styles/styles.css" %}>
     <link rel="stylesheet" href="https://use.typekit.net/aec8kbg.css">
 </head>
+
 <body>
+
+    <nav class="mb-4 py-1">
+        <div class="container">
+            <ul>
+                <li class="logo">
+                    <a href="https://www.instagram.com/paintyourblues/" target="_blank" class="nav-link text-green">
+                        <i class="fa fa-instagram text-green fa-lg mr-1"></i>
+                        PaintYourBlues
+                    </a>
+                </li>
+                <li class="hide"><a href="#">
+                        <h5 class="text-green">entries</h5>
+                    </a></li>
+                <li class="hide"><a href="#">
+                        <h5 class="text-green">leaderboard</h5>
+                    </a></li>
+                <li class="hide"><a href="#">
+                        <h5 class="text-green">about</h5>
+                    </a></li>
+                <li class="hide"><a href="#">
+                        <h5 class="text-green">curators</h5>
+                    </a></li>
+                <li class="hide"><a href="#">
+                        <h5 class="text-green">about</h5>
+                    </a></li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
+                        target="_blank"
+                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        title="Share on Twitter" class="mr-4">
+                        <i class="fa fa-twitter text-green fa-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaintyourblues.com"
+                        target="_blank"
+                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        title="Share on Facebook">
+                        <i class="fa fa-facebook text-green fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     {% block content %}{% endblock %}
+
+  <!-- footer -->
+
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <hr class="my-4">
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3 mb-3 sm-text-center">
+                <img src={% static "details/assets/spif-logo.png" %} style="max-height: 64px;" alt="Suicide India Foundation">
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <div class="text-right mb-3 mb-text-center sm-text-center">
+                    <a href="#" class="nav-link text-green mr-2">about</a>
+                    <span class="text-green text-weight-bold">.</span>
+                    <!-- <a href="" class="nav-link text-green mx-2">leaderboard</a> -->
+                    <!-- <span class="text-green text-weight-bold">.</span> -->
+                    <a href="http://www.spif.in/" class="nav-link text-green mx-2" target="_blank">spif</a>
+                    <!-- <span class="text-green text-weight-bold">.</span> -->
+                    <!-- <a href="" class="nav-link text-green mx-2">curators</a> -->
+                    <!-- <span class="text-green text-weight-bold">.</span> -->
+                    <!-- <a href="" class="nav-link text-green ml-2">legal</a> -->
+                </div>
+                <div class="paragraph-small text-lighten mb-3 text-right sm-text-center">
+                    © 2020 Suicide Prevention India Foundation. All Rights Reserved.
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
 </body>
+
+<script src="https://use.fontawesome.com/84351caa5a.js" defer></script>
+<script src={% static "details/scripts/index.js" %} defer></script>
+
 </html>

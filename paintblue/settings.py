@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['paintyourblues.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'gallery.apps.GalleryConfig',
     'details.apps.DetailsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

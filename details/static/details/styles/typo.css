@@ -1,0 +1,81 @@
+* {
+  font-family: Proxima Nova;
+  font-style: normal;
+}
+
+.theme-number {
+  font-family: Recoleta, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 76px;
+  line-height: 88px;
+  opacity: 0.4;
+  -webkit-text-fill-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #cc6633;
+}
+
+.paragraph-main {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h2 {
+  font-family: Recoleta, serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.paragraph-small {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.lead-para {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .lead-para {
+    font-size: 29px;
+    line-height: 40px;
+  }
+
+  .paragraph-big {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
