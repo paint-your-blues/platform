@@ -9,7 +9,7 @@ Django backend server for hosting paint-your-blues website.
    * base.html: Common element in all files
  * Static Folder:
    * Contains all static files in it like images, css , js
-   * Accessed via {% static 'app-name<eg:details>/<folders>/file' %}
+   * Accessed via {% static 'app-name&lt;eg:details&gt;/&lt;folders&gt;/file' %}
 2. Gallery App
   To display contents like random gallery of entrie and also leaderboard
  * Route-Available: /: main entry page
