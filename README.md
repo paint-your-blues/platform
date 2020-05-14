@@ -1,18 +1,28 @@
 # Platform
 Django backend server for hosting paint-your-blues website.
 ## Instructions
-* All the required for the website frontends are kept in details-app inside template/details
-* css and all public assets must be kept in details-app static folder
-* Template Folder:
-  * Base html is the common element for all webpages. eg: links, meta tags, navbar etc
-  * home.html is the homepage html file.
-    * css imported from static folder
-    
+1. Details App:
+  To display all the details of this competition like about, legal, judges etc
+ * Route-Available: details/about : About page
+ * Template Folder has all templated required. 
+   * about.html: about-page
+   * base.html: Common element in all files
+ * Static Folder:
+   * Contains all static files in it like images, css , js
+   * Accessed via {% static 'app-name<eg:details>/<folders>/file' %}
+2. Gallery App
+  To display contents like random gallery of entrie and also leaderboard
+ * Route-Available: /: main entry page
+ * Template Folder has all templated required.
+   * entry.html - entry page to show random entries in grid
+ * Static files could be saved in this directory too and can be accessed via 
+ {% static 'app-name<eg:galley>/<folders>/file' %}
+ 
 ## Getting started
 1. Create a virtual env if you want to isolate the app python packages.
 2. Run ```pip install -r /path/to/requirements.txt```
 3. Run python manage.py runserver
-4. Open given localhost
+4. Open given http://127.0.0.1:8000/ 
 
 ## Contributors :sparkles:
 <table>
