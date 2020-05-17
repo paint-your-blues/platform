@@ -11,6 +11,10 @@
     background-color: #fff;
 }
 
+.leaderboard-list-item.active {
+    background-color: #fff;
+}
+
 .leaderboard-list-item div {
     max-height: 64px;
 }
@@ -34,6 +38,12 @@
     padding: 8px;
     z-index: 1;
     margin-left: -32px;
+    transition: 0.2s;
+}
+
+.leaderboard-list-item.active .leaderboard-profile-pic {
+    opacity: 1;
+    margin-left: 0;
 }
 
 .leaderboard-rank {

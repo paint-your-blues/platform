@@ -7,7 +7,7 @@
         <div class="col-1"></div>
         <div class="col-5">
             <h2 class="m-0">leaderboard</h2>
-            <p class="mt-0 paragraph-small"><span class="text-orange">updated 3m ago.</span> use the search to find your standing</p>
+            <p class="mt-0 paragraph-small"><span class="text-orange">updated 3m ago. </span> use the search to find your standing.</p>
             <ul class="m-0 p-0">
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item p-2">
@@ -26,17 +26,25 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-5 flex-col">
-            <div class="leaderboard-preview-box p-5 flex-grow-1">
-                <h4 class="m-0 text-orange mb-3">
-                    leaderboard shows the current trend based likes received on instagram. to upvote an entry, visit instagram and hit
-                </h4>
-                <p class="paragraph-main mt-0 text-lighten text-smoke">
-                    top three positions after the voting ends will get ₹10,000 each. apart from these, three more entries will be picked by a curation panel.
-                </p>
+        <div class="col-5 flex-col show-on-desktop">
+            <div class="leaderboard-preview-box flex-grow-1">
+                <div id="blankPreview" class="p-5">
+                    <h4 class="m-0 text-orange mb-3">
+                        leaderboard shows the current trend based likes received on instagram. to upvote an entry, visit instagram and hit <i class="fa fa-heart fa-fw text-orange"></i>
+                    </h4>
+                    <p class="paragraph-main mt-0 text-lighten text-smoke">
+                        top three positions after the voting ends will get ₹10,000 each. apart from these, three more entries will be picked by a curator panel.
+                    </p>
+                </div>
+                <div id="framePreview">
+                    <img src="https://i.picsum.photos/id/238/400/400.jpg" alt="" class="img-fluid">
+                    <!-- Image here -->
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src={% static "gallery/scripts/leaderboard.js" %} defer></script>
 
 {% endblock content %}
