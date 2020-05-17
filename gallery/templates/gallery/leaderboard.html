@@ -1,0 +1,18 @@
+{% extends 'details/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <ul>
+        {% for leader in leaderboard %}
+        <div class="row">
+            <h1>{{leader.username}}</h1>
+            <img src={{leader.profile_pic}}>
+        </div>
+        <h2>{{leader.likes}}</h2>
+        <img src={{leader.entry}}>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}

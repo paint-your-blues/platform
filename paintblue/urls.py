@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from gallery.views import EntryPageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('details/', include('details.urls')),
-    path('', EntryPageView.as_view(), name='entry-page'),
+    path('', include('gallery.urls')),
 ]
