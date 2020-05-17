@@ -3,16 +3,40 @@
 {% block content %}
 
 <div class="container">
-    <ul>
-        {% for leader in leaderboard %}
-        <div class="row">
-            <h1>{{leader.username}}</h1>
-            <img src={{leader.profile_pic}}>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-5">
+            <h2 class="m-0">leaderboard</h2>
+            <p class="mt-0 paragraph-small"><span class="text-orange">updated 3m ago.</span> use the search to find your standing</p>
+            <ul class="m-0 p-0">
+                {% for leader in leaderboard %}
+                <div class="leaderboard-list-item p-2">
+                    <div class="mr-2">
+                        <img src={{leader.entry}} class="leaderboard-thumbnail"> 
+                        <img src={{leader.profile_pic}} class="leaderboard-profile-pic">
+                    </div>
+                    <div class="flex-grow-1">
+                        <p class="m-0 paragraph-small paragraph-big">{{leader.username}}</p>
+                        <span class="paragraph-small text-lighten"><i class="fa fa-heart"></i> {{leader.likes}}</span>
+                    </div>
+                    <div class="leaderboard-rank">
+                        {{ forloop.counter }}
+                    </div>
+                </div>
+                {% endfor %}
+            </ul>
         </div>
-        <h2>{{leader.likes}}</h2>
-        <img src={{leader.entry}}>
-        {% endfor %}
-    </ul>
+        <div class="col-5 flex-col">
+            <div class="leaderboard-preview-box p-5 flex-grow-1">
+                <h4 class="m-0 text-orange mb-3">
+                    leaderboard shows the current trend based likes received on instagram. to upvote an entry, visit instagram and hit
+                </h4>
+                <p class="paragraph-main mt-0 text-lighten text-smoke">
+                    top three positions after the voting ends will get ₹10,000 each. apart from these, three more entries will be picked by a curation panel.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

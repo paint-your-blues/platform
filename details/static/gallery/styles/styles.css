@@ -1,0 +1,53 @@
+.leaderboard-list-item {
+    display: flex;
+    cursor: pointer;
+    transition: ease .2s;
+    border-radius: 4px;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+}
+
+.leaderboard-list-item:hover {
+    background-color: #fff;
+}
+
+.leaderboard-list-item div {
+    max-height: 64px;
+}
+
+.leaderboard-thumbnail {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    box-shadow: 2px 2px 0px #F5E9D3;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.leaderboard-profile-pic {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-blend-mode: normal;
+    opacity: 0.5;
+    padding: 8px;
+    z-index: 1;
+    margin-left: -32px;
+}
+
+.leaderboard-rank {
+    font-family: Recoleta, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #cc6633;
+}
+
+.leaderboard-preview-box {
+    border-radius: 8px;
+    background: #3b261e;
+}
