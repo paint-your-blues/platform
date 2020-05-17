@@ -33,6 +33,13 @@ Django backend server for hosting paint-your-blues website.
                         <br />
                         <sub><b>Akhil Mohan</b></sub>
                     </a>
+                </td>
+                <td align="center">
+                    <a href="https://github.com/monkeyscript">
+                        <img src="https://avatars1.githubusercontent.com/u/55664019?v=4" width="100;" alt="monkeyscript"/>
+                        <br />
+                        <sub><b>MonkeyScript</b></sub>
+                    </a>
                 </td></tr>
 </table>
 
