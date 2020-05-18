@@ -45,6 +45,43 @@
     </div>
 </div>
 
+<!-- Preview modal  -->
+<div id="previewModal" class="modal flex-col">
+
+    <div class="text-center my-3">
+        <div class="modal-close-btn" id="modalCloseBtn">
+            <i class="fa fa-times fa-lg m-2 text-lighten"></i>
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <div class="modal-content flex-grow-1">
+        <div class="flex mb-3">
+            <div class="flex-grow-1">
+                <p class="text-smoke m-0 paragraph-small paragraph-big">leader.username</p>
+                <span class="text-smoke paragraph-small text-lighten"><i class="fa fa-heart text-smoke"></i> leader.likes</span>
+            </div>
+            <div class="leaderboard-rank">
+                01
+            </div>
+        </div>
+        <div class="modal-frame mb-3">
+            image goes here
+        </div>
+        <div class="text-center">
+            <a href="">
+                <button class="btn btn-green mb-3">
+                    upvote on instagram
+                </button>
+            </a>
+        </div>
+        <p class="paragraph-small text-smoke text-lighten text-center m-0">
+            to upvote, visit instagram and hit <i class="fa fa-heart text-smoke"></i>
+        </p>
+    </div>
+  
+</div>
+
 <script src={% static "gallery/scripts/leaderboard.js" %} defer></script>
 
 {% endblock content %}
