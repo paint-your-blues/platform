@@ -58,22 +58,30 @@
                         PaintYourBlues
                     </a>
                 </li>
-                <li class="hide"><a href="#">
+                <li class="show-on-desktop">
+                    <a href="#">
                         <h5 class="text-green">entries</h5>
-                    </a></li>
-                <li class="hide"><a href="#">
+                    </a>
+                </li>
+                <li class="show-on-desktop text-green text-weight-bold mx-3">.</li>
+                <li class="show-on-desktop">
+                    <a href="#">
                         <h5 class="text-green">leaderboard</h5>
-                    </a></li>
-                <li class="hide"><a href="#">
+                    </a>
+                </li>
+                <li class="show-on-desktop text-green text-weight-bold mx-3">.</li>
+                <li class="show-on-desktop">
+                    <a href="#">
                         <h5 class="text-green">about</h5>
-                    </a></li>
-                <li class="hide"><a href="#">
+                    </a>
+                </li>
+                <li class="show-on-desktop text-green text-weight-bold mx-3">.</li>
+                <li class="show-on-desktop mr-4">
+                    <a href="#">
                         <h5 class="text-green">curators</h5>
-                    </a></li>
-                <li class="hide"><a href="#">
-                        <h5 class="text-green">about</h5>
-                    </a></li>
-                <li>
+                    </a>
+                </li>
+                <li class="show-on-desktop">
                     <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
                         target="_blank"
                         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
@@ -81,7 +89,7 @@
                         <i class="fa fa-twitter text-green fa-lg"></i>
                     </a>
                 </li>
-                <li>
+                <li class="show-on-desktop">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaintyourblues.com"
                         target="_blank"
                         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
@@ -89,9 +97,47 @@
                         <i class="fa fa-facebook text-green fa-lg"></i>
                     </a>
                 </li>
+                <li>
+                    <span class="nav-toggle-icon" onclick="toggleNav()">
+                        <i class="fa fa-bars text-green fa-lg"></i>
+                    </span>
+                </li>
             </ul>
         </div>
+        <div class="container" id="navbarCollapse">
+            <div class="text-center pb-4">
+                <a href="#" class="text-center nav-link">
+                    <h5 class="text-green">entries</h5>
+                </a>
+                <br>
+                <a href="#" class="text-center nav-link">
+                    <h5 class="text-green">leaderboard</h5>
+                </a>
+                <br>
+                <a href="#" class="text-center nav-link">
+                    <h5 class="text-green">about</h5>
+                </a>
+                <br>
+                <a href="#" class="text-center nav-link">
+                    <h5 class="text-green">curators</h5>
+                </a>
+                <br><br>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
+                    target="_blank"
+                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                    title="Share on Twitter" class="mr-3">
+                    <i class="fa fa-twitter text-green fa-lg"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaintyourblues.com"
+                    target="_blank"
+                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                    title="Share on Facebook">
+                    <i class="fa fa-facebook text-green fa-lg"></i>
+                </a>
+            </div>
+        </div>
     </nav>
+
     {% block content %}{% endblock %}
 
   <!-- footer -->

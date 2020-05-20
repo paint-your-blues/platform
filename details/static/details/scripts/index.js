@@ -11,3 +11,15 @@ function scrollFunction() {
     document.querySelector("nav").style.boxShadow = "none";
   }
 }
+
+//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navbar toggle function ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 
+function toggleNav() {
+  var x = document.getElementById("navbarCollapse");
+  if (x.className === "container") {
+    x.className += "container active";
+  } else {
+    x.className = "container";
+  }
+}
