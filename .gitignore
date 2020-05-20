@@ -3,7 +3,8 @@
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-
+media/thumbnails/*
+media/profile_pics/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -119,4 +120,3 @@ __pycache__/
 package-lock.json
 .DS_STORE
 .idea/
-media/gallery

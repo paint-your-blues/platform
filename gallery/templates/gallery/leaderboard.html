@@ -12,11 +12,11 @@
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item p-2">
                     <div class="mr-2">
-                        <img src={{leader.entry}} class="leaderboard-thumbnail"> 
-                        <img src={{leader.profile_pic}} class="leaderboard-profile-pic">
+                        <img src="{{leader.thumbnail.url}}" class="leaderboard-thumbnail"> 
+                        <img src="{{leader.profile_pic.url}}" class="leaderboard-profile-pic">
                     </div>
                     <div class="flex-grow-1">
-                        <p class="m-0 paragraph-small paragraph-big">{{leader.username}}</p>
+                        <p class="m-0 paragraph-small paragraph-big">{{leader.insta_id}}</p>
                         <span class="paragraph-small text-lighten"><i class="fa fa-heart"></i> {{leader.likes}}</span>
                     </div>
                     <div class="leaderboard-rank">
