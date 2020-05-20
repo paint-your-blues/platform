@@ -2,31 +2,37 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 // Hide frame by default
-document.getElementById('framePreview').style.display = 'none';
+var framePreview = document.querySelector('#framePreview');
+framePreview.style.display = 'none';
+
+framePreviewImg=document.querySelector('#framePreviewImg');
+modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
+
 var listItems = document.getElementsByClassName("leaderboard-list-item");
-var i;
+
 // Iterate over accordion and add click listeners
-for (i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener("click", function () {
+for (var i = 0; i < listItems.length; i++) {
+    listItems[i].addEventListener("click", function (evt) {
         if(width>1024){
             // Toggle frame on the side 
-            showFrame();
+            showFrame(evt);
         }else {
             // Toggle modal 
-            showModal();
+            showModal(evt);
         }
         setItemsInactive();   
         this.classList.add("active");
     });
 }
 // Hide blank text and show frame
-function showFrame() {
+function showFrame(frame) {
     document.getElementById('blankPreview').style.display = 'none';
-    document.getElementById('framePreview').style.display = 'block';
+    framePreview.style.display = 'block';
+    framePreviewImg.src=frame.target.querySelector(".leaderboard-thumbnail").src;
 }
 // Reset active state of all items
 function setItemsInactive() {
-    for (i = 0; i < listItems.length; i++) {
+    for (var i = 0; i < listItems.length; i++) {
         listItems[i].classList.remove("active");
     }
 }
@@ -37,8 +43,9 @@ function setItemsInactive() {
 // Get the modal
 var modal = document.getElementById("previewModal");
 // Function to show modal
-function showModal() {
+function showModal(frame) {
     modal.style.display = "flex";
+    modelFramePreviewImg.src=frame.target.querySelector(".leaderboard-thumbnail").src;
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");
