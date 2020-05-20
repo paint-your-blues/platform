@@ -50,6 +50,22 @@ nav ul a {
   flex: 1;
 }
 
+@media (min-width: 1024px) {
+  .nav-toggle-icon {
+    display: none;
+  }
+}
+
+#navbarCollapse {
+  height: 0px;
+  opacity: 0;
+}
+
+#navbarCollapse.active{
+  height: auto;
+  opacity: 1;
+}
+
 .hide {
   display: none;
 }
