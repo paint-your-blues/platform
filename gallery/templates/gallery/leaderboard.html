@@ -16,8 +16,8 @@
                         <img src="{{leader.profile_pic.url}}" class="leaderboard-profile-pic">
                     </div>
                     <div class="flex-grow-1">
-                        <p class="m-0 paragraph-small paragraph-big">{{leader.insta_id}}</p>
-                        <span class="paragraph-small text-lighten"><i class="fa fa-heart"></i> {{leader.likes}}</span>
+                        <p class="m-0 paragraph-small paragraph-big" id="insta_id">{{leader.insta_id}}</p>
+                        <span class="paragraph-small text-lighten"><i class="fa fa-heart"></i><span id="insta_likes">{{leader.likes}}</span> </span>
                     </div>
                     <div>
                         <span class="leaderboard-rank">
@@ -39,7 +39,7 @@
                     </p>
                 </div>
                 <div id="framePreview">
-                    <img src="https://i.picsum.photos/id/238/400/400.jpg" alt="image" class="img-fluid" id="framePreviewImg">
+                    <img alt="image" class="img-fluid" id="framePreviewImg">
                 </div>
             </div>
         </div>
@@ -59,8 +59,9 @@
     <div class="modal-content flex-grow-1">
         <div class="flex mb-3">
             <div class="flex-grow-1">
-                <p class="text-smoke m-0 paragraph-small paragraph-big">leader.username</p>
-                <span class="text-smoke paragraph-small text-lighten"><i class="fa fa-heart text-smoke"></i> leader.likes</span>
+                <p class="text-smoke m-0 paragraph-small paragraph-big" id="modal_username">leader.username</p>
+                <span class="text-smoke paragraph-small text-lighten"><i class="fa fa-heart text-smoke"></i>
+                <span id="modal_likes" class="text-smoke paragraph-small text-lighten">leader.likes</span></span>
             </div>
             <div class="leaderboard-rank">
                 01

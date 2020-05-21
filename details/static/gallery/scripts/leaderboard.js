@@ -5,8 +5,8 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var framePreview = document.querySelector('#framePreview');
 framePreview.style.display = 'none';
 
-framePreviewImg=document.querySelector('#framePreviewImg');
-modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
+var framePreviewImg=document.querySelector('#framePreviewImg');
+var modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
 
 var listItems = document.getElementsByClassName("leaderboard-list-item");
 
@@ -57,6 +57,8 @@ var modal = document.getElementById("previewModal");
 function showModal(frame) {
     modal.style.display = "flex";
     modelFramePreviewImg.src=frame.target.querySelector(".leaderboard-thumbnail").src;
+    document.querySelector("#modal_username").innerHTML=frame.target.querySelector('#insta_id').innerHTML;
+    document.querySelector("#modal_likes").innerHTML=frame.target.querySelector('#insta_likes').innerHTML;
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");
