@@ -1,10 +1,7 @@
 .leaderboard-list-item {
   display: flex;
-  cursor: pointer;
   transition: ease 0.2s;
   border-radius: 4px;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
 }
 
 .leaderboard-list-item > * {
@@ -65,7 +62,12 @@
   background: #3b261e;
 }
 
-#framePreviewImg {
+#rank-list {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#framePreviewImg, #modelFramePreviewImg {
   border-radius: 8px;
 }
 

@@ -7,7 +7,7 @@
         <div class="col-1"></div>
         <div class="col-5">
             <h2 class="m-0">leaderboard</h2>
-            <p class="mt-0 paragraph-small"><span class="text-orange">updated 3m ago. </span> use the search to find your standing.</p>
+            <p class="mt-0 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
             <ul class="m-0 p-0" id="rank-list">
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item p-2" id="list-item">
@@ -38,7 +38,6 @@
                 </div>
                 <div id="framePreview">
                     <img src="https://i.picsum.photos/id/238/400/400.jpg" alt="image" class="img-fluid" id="framePreviewImg">
-                    <!-- Image here -->
                 </div>
             </div>
         </div>
@@ -65,7 +64,7 @@
                 01
             </div>
         </div>
-        <div class="modal-frame mb-3">
+        <div class="modal-frame mb-3 flex">
             <img class="img-fluid" alt="" id="modelFramePreviewImg">
         </div>
         <div class="text-center">

@@ -31,7 +31,7 @@ for (var i = 0; i < listItems.length; i++) {
 // Hide blank text and show frame
 function showFrame(frame) {
     document.getElementById('blankPreview').style.display = 'none';
-    framePreview.style.display = 'block';
+    framePreview.style.display = 'flex';
     framePreviewImg.src=frame.target.querySelector(".leaderboard-thumbnail").src;
 }
 // Reset active state of all items
@@ -74,3 +74,23 @@ window.onclick = function(event) {
     setItemsInactive();
   }
 }
+
+//
+// Refresh time indicator
+//
+function startTimer() {
+    var refreshStatusEl = document.getElementById('refreshStatus');
+    refreshStatusEl.innerHTML = 'updated just now.'
+    setTimeout(() => {
+        refreshStatusEl.innerHTML = 'updated 10s ago.'
+    }, 10000);
+    setTimeout(() => {
+        refreshStatusEl.innerHTML = 'updated 30s ago.'
+    }, 30000);
+    let minTimer = 0;
+    setInterval(() => {
+        minTimer++;
+        refreshStatusEl.innerHTML = 'updated '+minTimer+'m ago.'
+    }, 60000);
+}
+startTimer();
