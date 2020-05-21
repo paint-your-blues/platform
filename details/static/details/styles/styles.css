@@ -57,13 +57,11 @@ nav ul a {
 }
 
 #navbarCollapse {
-  height: 0px;
-  opacity: 0;
+  display: none;
 }
 
 #navbarCollapse.active{
-  height: auto;
-  opacity: 1;
+  display: block;
 }
 
 .hide {
@@ -106,7 +104,7 @@ nav {
   background-color: #f5e9d3;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 90;
   transition: ease 0.2s;
 }
 

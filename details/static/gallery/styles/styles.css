@@ -65,6 +65,10 @@
   background: #3b261e;
 }
 
+#framePreviewImg {
+  border-radius: 8px;
+}
+
 .modal {
   display: none;
   position: fixed;

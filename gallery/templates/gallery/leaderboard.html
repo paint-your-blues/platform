@@ -8,7 +8,7 @@
         <div class="col-5">
             <h2 class="m-0">leaderboard</h2>
             <p class="mt-0 paragraph-small"><span class="text-orange">updated 3m ago. </span> use the search to find your standing.</p>
-            <ul class="m-0 p-0">
+            <ul class="m-0 p-0" id="rank-list">
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item p-2" id="list-item">
                     <div class="mr-2">
@@ -27,7 +27,7 @@
             </ul>
         </div>
         <div class="col-5 flex-col show-on-desktop">
-            <div class="leaderboard-preview-box flex-grow-1">
+            <div class="leaderboard-preview-box">
                 <div id="blankPreview" class="p-5">
                     <h4 class="m-0 text-orange mb-3">
                         leaderboard shows the current trend based likes received on instagram. to upvote an entry, visit instagram and hit <i class="fa fa-heart fa-fw text-orange"></i>

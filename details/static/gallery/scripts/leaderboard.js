@@ -12,17 +12,21 @@ var listItems = document.getElementsByClassName("leaderboard-list-item");
 
 // Iterate over accordion and add click listeners
 for (var i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener("click", function (evt) {
-        if(width>1024){
+    if(width>1024){
+        listItems[i].addEventListener("mouseenter", function (evt) {
             // Toggle frame on the side 
             showFrame(evt);
-        }else {
+            setItemsInactive();   
+            this.classList.add("active");
+        });
+    }else {
+        listItems[i].addEventListener("click", function (evt) {
             // Toggle modal 
             showModal(evt);
-        }
-        setItemsInactive();   
-        this.classList.add("active");
-    });
+            setItemsInactive();   
+            this.classList.add("active");
+        });
+    }
 }
 // Hide blank text and show frame
 function showFrame(frame) {
@@ -36,6 +40,13 @@ function setItemsInactive() {
         listItems[i].classList.remove("active");
     }
 }
+// Reset text when mouse leaves list
+document.getElementById("rank-list").addEventListener("mouseleave", function (evt) {
+    setItemsInactive();   
+    document.getElementById('blankPreview').style.display = 'block';
+    framePreview.style.display = 'none';
+});;
+
 
 //
 // Modal controls
