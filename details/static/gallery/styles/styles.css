@@ -1,7 +1,21 @@
+#leaderboardTitle {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+@media (min-width: 1024px) {
+  #leaderboardTitle {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
 .leaderboard-list-item {
   display: flex;
   transition: ease 0.2s;
   border-radius: 4px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .leaderboard-list-item > * {
@@ -66,7 +80,7 @@
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
-  right: 0.5rem;
+  right: 16px;
 }
 
 #framePreviewImg,
