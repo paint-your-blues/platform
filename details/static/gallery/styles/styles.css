@@ -65,9 +65,12 @@
 #rank-list {
   max-height: 80vh;
   overflow-y: auto;
+  position: relative;
+  right: 0.5rem;
 }
 
-#framePreviewImg, #modelFramePreviewImg {
+#framePreviewImg,
+#modelFramePreviewImg {
   border-radius: 8px;
 }
 
