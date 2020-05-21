@@ -82,9 +82,6 @@ function startTimer() {
     var refreshStatusEl = document.getElementById('refreshStatus');
     refreshStatusEl.innerHTML = 'updated just now.'
     setTimeout(() => {
-        refreshStatusEl.innerHTML = 'updated 10s ago.'
-    }, 10000);
-    setTimeout(() => {
         refreshStatusEl.innerHTML = 'updated 30s ago.'
     }, 30000);
     let minTimer = 0;
