@@ -106,8 +106,13 @@
 }
 
 #rank-list {
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+#rank-list::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 1024px) {
