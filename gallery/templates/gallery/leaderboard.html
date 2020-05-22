@@ -7,17 +7,18 @@
         <div class="col-1"></div>
         <div class="col-5">
             <h2 class="m-0" id="leaderboardTitle">leaderboard</h2>
-            <p class="mt-0 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
-            <ul class="m-0 p-0" id="rank-list">
+            <p class="m-0 mb-2 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
+            <hr class="m-0">
+            <ul class="m-0 p-0 py-2" id="rank-list">
                 {% for leader in leaderboard %}
-                <div class="leaderboard-list-item py-2" id="list-item">
+                <div class="leaderboard-list-item" id="list-item">
                     <div class="mr-2">
                         <img src="{{leader.thumbnail.url}}" class="leaderboard-thumbnail"> 
                         <img src="{{leader.profile_pic.url}}" class="leaderboard-profile-pic">
                     </div>
                     <div class="flex-grow-1">
-                        <p class="m-0 paragraph-small paragraph-big" id="insta_id">{{leader.insta_id}}</p>
-                        <span class="paragraph-small text-lighten"><i class="fa fa-heart mr-1"></i><span id="insta_likes">{{leader.likes}}</span> </span>
+                        <p class="m-0 paragraph-small paragraph-big text-weight-bold" id="insta_id">{{leader.insta_id}}</p>
+                        <span class="paragraph-small text-lighten likes-span"><i class="fa fa-heart mr-1"></i><span id="insta_likes">{{leader.likes}}</span> </span>
                     </div>
                     <div>
                         <span class="leaderboard-rank">
