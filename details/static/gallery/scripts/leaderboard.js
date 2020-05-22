@@ -23,8 +23,6 @@ for (var i = 0; i < listItems.length; i++) {
         listItems[i].addEventListener("click", function (evt) {
             // Toggle modal 
             showModal(evt);
-            setItemsInactive();   
-            this.classList.add("active");
         });
     }
 }

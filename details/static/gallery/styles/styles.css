@@ -27,9 +27,6 @@
 .leaderboard-list-item > * {
   pointer-events: none;
 }
-.leaderboard-list-item:hover {
-  background-color: #fff;
-}
 
 .leaderboard-list-item.active {
   background-color: #fff;
@@ -88,12 +85,12 @@
 #rank-list {
   max-height: 80vh;
   overflow-y: auto;
-  position: relative;
 }
 
 @media (min-width: 1024px) {
   #rank-list {
-    right: 16px;
+    margin-left: -16px !important;
+    margin-right: -32px !important;
   }
 }
 
