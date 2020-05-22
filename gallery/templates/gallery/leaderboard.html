@@ -9,7 +9,7 @@
             <h2 class="m-0" id="leaderboardTitle">leaderboard</h2>
             <p class="m-0 mb-2 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
             <hr class="m-0">
-            <ul class="m-0 p-0 py-2" id="rank-list">
+            <ul class="m-0 p-0 pt-2" id="rank-list">
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item" id="list-item">
                     <div class="mr-2">
@@ -35,7 +35,8 @@
                 </div>
                 {% endfor %}
             </ul>
-            <div class="scroll-indicator-grad"></div>
+            <div class="scroll-indicator-grad">
+            </div>
         </div>
         <div class="col-5 flex-col show-on-desktop">
             <div class="leaderboard-preview-box">

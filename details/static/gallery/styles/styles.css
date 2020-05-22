@@ -125,6 +125,8 @@
   max-height: 90vh;
   overflow-y: auto;
   -ms-overflow-style: none;
+  padding-bottom: 10vh !important;
+  scrollbar-width: none;
 }
 
 #rank-list::-webkit-scrollbar {
@@ -186,8 +188,10 @@
 .scroll-indicator-grad {
   background: linear-gradient(to top, #F5E9D3 10%, rgba(245, 233, 211, 0) 98.7%);
   min-height: 10vh;
-  width: inherit;
   position: absolute;
   bottom: 0;
-  z-index: 10;
+  z-index: 4;
+  width: -webkit-fill-available;
+  width: -moz-available;          
+  margin-left: -32px;
 }
