@@ -53,7 +53,7 @@ document.getElementById("rank-list").addEventListener("mouseleave", function (ev
 var modal = document.getElementById("previewModal");
 // Function to show modal
 function showModal(frame) {
-    modal.style.display = "flex";
+    modal.style.height = "100%";
     modelFramePreviewImg.src=frame.target.querySelector(".leaderboard-thumbnail").src;
     document.querySelector("#modal_username").innerHTML=frame.target.querySelector('#insta_id').innerHTML;
     document.querySelector("#modal_likes").innerHTML=frame.target.querySelector('#insta_likes').innerHTML;
@@ -63,7 +63,7 @@ function showModal(frame) {
 var modalCloseBtn = document.getElementById("modalCloseBtn");
 // When the user clicks on the button, open the modal
 modalCloseBtn.onclick = function() {
-    modal.style.display = "none";
+    modal.style.height = "0"
     // Reset selection 
     setItemsInactive();
 }
