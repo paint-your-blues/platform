@@ -52,7 +52,7 @@
 
 @media (min-width: 1024px) {
   .leaderboard-profile-pic {
-    display: inline;
+    display: inline-block;
     position: relative;
     height: 64px;
     width: 64px;
@@ -80,6 +80,21 @@
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #cc6633;
+}
+
+.upvote-btn {
+  display: none;
+  min-height: 48px;
+  font-size: 20px;
+  line-height: 32px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: .5rem;
+  transition: ease .2s;
+}
+
+.leaderboard-list-item.active .upvote-btn {
+  display: inline;
 }
 
 .leaderboard-preview-box {
