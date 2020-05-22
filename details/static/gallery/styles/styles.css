@@ -30,6 +30,7 @@
 
 .leaderboard-list-item.active {
   background-color: #fff;
+  box-shadow: 0px 5px 19px rgba(59, 38, 30, 0.1);
 }
 
 .leaderboard-list-item div {
@@ -46,16 +47,23 @@
 }
 
 .leaderboard-profile-pic {
-  position: relative;
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  background-blend-mode: normal;
-  opacity: 0.5;
-  padding: 8px;
-  z-index: 1;
-  margin-left: -32px;
-  transition: 0.2s;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .leaderboard-profile-pic {
+    display: inline;
+    position: relative;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-blend-mode: normal;
+    opacity: 0.5;
+    padding: 8px;
+    z-index: 1;
+    margin-left: -32px;
+    transition: 0.2s;
+  }
 }
 
 .leaderboard-list-item.active .leaderboard-profile-pic {
