@@ -74,6 +74,8 @@
     margin-left: -32px;
     transition: 0.2s;
     transform: rotate(-50deg);
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
   }
 }
 
@@ -81,6 +83,8 @@
   opacity: 1;
   margin-left: 0;
   transform: rotate(0deg);
+  -webkit-filter: none;
+  filter: none;
 }
 
 .leaderboard-rank {
@@ -177,4 +181,13 @@
   font-size: 20px;
   line-height: 32px;
   height: 40px !important;
+}
+
+.scroll-indicator-grad {
+  background: linear-gradient(to top, #F5E9D3 10%, rgba(245, 233, 211, 0) 98.7%);
+  min-height: 10vh;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
 }
