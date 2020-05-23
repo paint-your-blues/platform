@@ -158,7 +158,7 @@
 }
 
 #framePreviewImg,
-#modelFramePreviewImg {
+#modelFramePreviewImg, .entry-thumbnail {
   border-radius: 8px;
 }
 
@@ -213,4 +213,33 @@
   width: -webkit-fill-available;
   width: -moz-available;
   margin-left: -32px;
+}
+
+.entry-item {
+  height: 100%;
+  background-color: #3b261e;
+  border-radius: 8px;
+  padding: 0;
+  transition: ease .5s;
+}
+
+.entry-item.active {
+  padding: 1.5rem;
+}
+
+.entry-thumbnail {
+  width: 100%;
+  transition: ease .5s;
+}
+
+.entry-item.active .entry-thumbnail {
+  width: 20%;
+}
+
+.entry-details {
+  display: none;
+}
+
+.entry-item.active .entry-details {
+  display: block;
 }

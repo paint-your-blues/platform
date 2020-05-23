@@ -3,8 +3,69 @@
 {% block content %}
 
 <div class="container">
-    <h1>Entry</h1>
-    {{leaderboard}}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <h2 class="m-0" id="leaderboardTitle">shortlisted</h2>
+            <p class="m-0 mb-4 paragraph-small">
+                <span class="text-orange text-weight-bold">voting open!</span> last date to submit your votes : <span class="text-weight-bold">july 20, 2020</span>
+            </p>
+        </div>
+    </div> 
+    <div class="row">
+        {% for leader in leaderboard %}
+            <div class="col-3 mb-4">
+                <div class="entry-item">
+                    <div class="flex">
+                        <img src="{{leader.thumbnail.url}}" class="img-fluid entry-thumbnail"> 
+                    </div>
+                    <div class="entry-details">
+                        <p class="paragraph-small text-weight-bold text-smoke">{{leader.insta_id}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
+
+<!-- Preview modal  -->
+<div id="previewModal" class="modal flex-col">
+
+    <div class="text-center my-3">
+        <div class="modal-close-btn" id="modalCloseBtn">
+            <i class="fa fa-times fa-lg m-2 text-lighten"></i>
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <div class="modal-content flex-grow-1">
+        <div class="flex mb-2">
+            <div class="flex-grow-1">
+                <p class="text-smoke m-0 paragraph-small paragraph-big" id="modal_username">leader.username</p>
+                <span class="text-smoke paragraph-small text-lighten"><i class="fa fa-heart text-smoke"></i>
+                <span id="modal_likes" class="text-smoke paragraph-small text-lighten">leader.likes</span></span>
+            </div>
+            <div class="leaderboard-rank">
+                01
+            </div>
+        </div>
+        <div class="modal-frame mb-3 flex">
+            <img class="img-fluid" alt="" id="modelFramePreviewImg">
+        </div>
+        <div class="text-center">
+            <a href="">
+                <button class="btn btn-green mb-2">
+                    upvote on instagram
+                </button>
+            </a>
+        </div>
+        <p class="paragraph-small text-smoke text-lighten text-center m-0">
+            to upvote, visit instagram and hit <i class="fa fa-heart text-smoke"></i>
+        </p>
+    </div>
+  
+</div>
+
+<script src={% static "gallery/scripts/entries.js" %} defer></script>
 
 {% endblock content %}
