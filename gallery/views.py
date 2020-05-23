@@ -1,4 +1,3 @@
-from django.views.generic import TemplateView
 from django.shortcuts import render
 from .models import Gallery
 import requests
@@ -7,8 +6,10 @@ import threading
 
 
 # Create your views here.
-class EntryPageView(TemplateView):
-    template_name = 'gallery/entry.html'
+def EntryPageView(req):
+    gallery = Gallery.objects.all().order_by('-likes')[:20]
+    context = {'leaderboard': gallery}
+    return render(req, 'gallery/entry.html', context)
 
 
 def updateTheDB():
@@ -29,7 +30,7 @@ def updateTheDB():
 
 def LeaderBoardView(req):
     gallery = Gallery.objects.all().order_by('-likes')[:20]
-    # t1 = threading.Thread(target=updateTheDB)
-    # t1.start()
+    t1 = threading.Thread(target=updateTheDB)
+    t1.start()
     context = {'leaderboard': gallery}
     return render(req, 'gallery/leaderboard.html', context)
