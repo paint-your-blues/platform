@@ -98,6 +98,17 @@
   -webkit-text-stroke-color: #cc6633;
 }
 
+.upvote-btn-container {
+  width: 0;
+  opacity: 0;
+  transition: 0.25s ease-in;
+}
+
+.leaderboard-list-item.active .upvote-btn-container {
+  width: auto;
+  opacity: 1;
+}
+
 .upvote-btn {
   display: inline-block;
   width: 0;
@@ -108,7 +119,6 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-left: 0.5rem;
-  transition: ease 0.5s;
 }
 
 .leaderboard-list-item.active .upvote-btn {
