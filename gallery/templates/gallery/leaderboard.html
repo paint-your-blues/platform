@@ -6,9 +6,11 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-5">
-            <h2 class="m-0" id="leaderboardTitle">leaderboard</h2>
-            <p class="m-0 mb-2 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
-            <hr class="m-0">
+            <div id="titleBoxRef">
+                <h2 class="m-0" id="leaderboardTitle">leaderboard</h2>
+                <p class="m-0 mb-2 paragraph-small"><span class="text-orange text-weight-bold" id="refreshStatus"></span></p>
+                <hr class="m-0">
+            </div>
             <ul class="m-0 p-0 pt-2" id="rank-list">
                 {% for leader in leaderboard %}
                 <div class="leaderboard-list-item" id="list-item">

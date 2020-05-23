@@ -92,3 +92,16 @@ function startTimer() {
     }, 60000);
 }
 startTimer();
+
+//
+// Resizing frame
+//
+var previewBox = document.querySelector(".leaderboard-preview-box");
+// Calculate height by ratio 
+let calcHeight = (5/4) * previewBox.offsetWidth;
+// Set height 
+previewBox.style.height = calcHeight + 'px';
+// Get height of title box
+var titleHeight = document.querySelector("#titleBoxRef").offsetHeight;
+// Set max height for list 
+document.querySelector("#rank-list").style.maxHeight = calcHeight - titleHeight + 'px';
