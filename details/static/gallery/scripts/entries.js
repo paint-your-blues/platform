@@ -8,7 +8,7 @@ var entries = document.getElementsByClassName("entry-item");
 // Iterate over entries and add click listeners
 for (var i = 0; i < entries.length; i++) {
     if(width>1024){
-        entries[i].addEventListener("mouseenter", function (evt) {
+        entries[i].addEventListener("click", function (evt) {
             setItemsInactive();   
             this.classList.add("active");
         });
@@ -18,9 +18,9 @@ for (var i = 0; i < entries.length; i++) {
             showModal(evt);
         });
     }
-    entries[i].addEventListener("mouseleave", function (evt) {
-        setItemsInactive();
-    });
+    // entries[i].addEventListener("mouseleave", function (evt) {
+    //     setItemsInactive();
+    // });
 }
 // Reset active state of all items
 function setItemsInactive() {

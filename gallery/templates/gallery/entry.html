@@ -21,6 +21,14 @@
                     </div>
                     <div class="entry-details">
                         <p class="paragraph-small text-weight-bold text-smoke">{{leader.insta_id}}</p>
+                        <span class="rotated-text-standing text-orange paragraph-small">STANDING</span>
+                        <span class="leaderboard-rank">
+                            {% if forloop.counter <= 9 %}
+                                0{{forloop.counter}}
+                            {% else %}
+                                {{forloop.counter}}
+                            {% endif %}
+                        </span>
                     </div>
                 </div>
             </div>
