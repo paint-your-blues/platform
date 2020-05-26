@@ -7,7 +7,7 @@ import threading
 
 # Create your views here.
 def EntryPageView(req):
-    gallery = Gallery.objects.all().order_by('-likes')[:20]
+    gallery = Gallery.objects.all().order_by('-likes')
     context = {'leaderboard': gallery}
     return render(req, 'gallery/entry.html', context)
 
