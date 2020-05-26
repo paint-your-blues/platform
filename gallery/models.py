@@ -18,4 +18,4 @@ class Gallery(models.Model):
     likes = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.insta_id + str(self.entry_id)
+        return self.insta_id + " " + str(self.entry_id)
