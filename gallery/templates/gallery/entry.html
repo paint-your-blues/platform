@@ -18,17 +18,28 @@
                 <div class="entry-item">
                     <div class="flex">
                         <img src="{{leader.thumbnail.url}}" class="img-fluid entry-thumbnail"> 
-                    </div>
-                    <div class="entry-details">
-                        <p class="paragraph-small text-weight-bold text-smoke">{{leader.insta_id}}</p>
-                        <span class="rotated-text-standing text-orange paragraph-small">STANDING</span>
-                        <span class="leaderboard-rank">
-                            {% if forloop.counter <= 9 %}
-                                0{{forloop.counter}}
-                            {% else %}
-                                {{forloop.counter}}
-                            {% endif %}
-                        </span>
+                        <div class="entry-details">
+                            <span class="text-smoke text-lighten" style="float: right;">
+                                <i class="fa fa-fw fa-heart text-smoke"></i> {{leader.likes}}
+                            </span>
+                            <img src="{{leader.thumbnail.url}}" class="img-fluid mb-2" style="width: 25%; border-radius: 8px;"> 
+                            <div class="flex" style="align-items: center;">
+                                <img src="{{leader.profile_pic.url}}" class="img-fluid mr-2" style="width: 12.5%; border-radius: 50%;"> 
+                                <span class="paragraph-small text-weight-bold text-smoke">{{leader.insta_id}}</span>
+                            </div>
+                            <span style="position: absolute; bottom: 0;">
+                                <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
+                                <!-- <span class="rotated-text-standing text-orange paragraph-small">STANDING</span> -->
+                                <span class="leaderboard-rank">
+                                    {% if forloop.counter <= 9 %}
+                                        0{{forloop.counter}}
+                                    {% else %}
+                                        {{forloop.counter}}
+                                    {% endif %}
+                                </span>
+                            </span>
+                            <button class="btn btn-upvote-entry btn-green">upvote</button>
+                        </div>
                     </div>
                 </div>
             </div>

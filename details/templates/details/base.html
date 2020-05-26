@@ -49,8 +49,8 @@
 
 <body>
 
-    <nav class="mb-4 py-1">
-        <div class="container">
+    <nav class="mb-4">
+        <div class="container py-1">
             <ul>
                 <li class="logo">
                     <a href="https://www.instagram.com/paintyourblues/" target="_blank" class="nav-link text-green">
@@ -106,7 +106,7 @@
             </ul>
         </div>
         <div class="container" id="navbarCollapse">
-            <div class="text-center pb-4">
+            <div class="text-center">
                 <a href="{% url 'entry-page' %}" class="text-center nav-link">
                     <h5 class="text-green">entries</h5>
                 </a>
@@ -122,7 +122,7 @@
                 {% comment %} <a href="#" class="text-center nav-link hidden">
                     <h5 class="text-green">curators</h5>
                 </a> {% endcomment %}
-                <br><br>
+                <br>
                 <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
                     target="_blank"
                     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
@@ -135,6 +135,7 @@
                     title="Share on Facebook">
                     <i class="fa fa-facebook text-green fa-lg"></i>
                 </a>
+                <hr class="mt-4 mb-0">
             </div>
         </div>
     </nav>
