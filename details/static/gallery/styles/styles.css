@@ -158,7 +158,8 @@
 }
 
 #framePreviewImg,
-#modelFramePreviewImg, .entry-thumbnail {
+#modelFramePreviewImg,
+.entry-thumbnail {
   border-radius: 8px;
 }
 
@@ -220,12 +221,16 @@
   background-color: #3b261e;
   border-radius: 8px;
   padding: 0;
-  transition: ease .5s;
+  transition: ease 0.5s;
+}
+
+.entry-item > * {
+  pointer-events: none;
 }
 
 .entry-thumbnail {
   opacity: 1;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .entry-item.active .entry-thumbnail {
@@ -250,13 +255,13 @@
 .col-sm-6 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%
+  max-width: 50%;
 }
 @media (min-width: 1024px) {
   .col-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    max-width: 25%
+    max-width: 25%;
   }
 }
 

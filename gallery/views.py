@@ -3,11 +3,13 @@ from .models import Gallery
 import requests
 import re
 import threading
+import random
 
 
 # Create your views here.
 def EntryPageView(req):
-    gallery = Gallery.objects.all().order_by('-likes')
+    gallery = (list(Gallery.objects.all()))
+    random.shuffle(gallery)
     context = {'leaderboard': gallery}
     return render(req, 'gallery/entry.html', context)
 
@@ -30,7 +32,7 @@ def updateTheDB():
 
 def LeaderBoardView(req):
     gallery = Gallery.objects.all().order_by('-likes')[:20]
-    t1 = threading.Thread(target=updateTheDB)
-    t1.start()
+    # t1 = threading.Thread(target=updateTheDB)
+    # t1.start()
     context = {'leaderboard': gallery}
     return render(req, 'gallery/leaderboard.html', context)

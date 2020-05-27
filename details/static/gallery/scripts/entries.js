@@ -2,8 +2,9 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 var modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
-
-var entries = document.getElementsByClassName("entry-item");
+var modalUserName = document.querySelector("#modal_username");
+var modalUserLikes = document.querySelector("#modal_likes");
+var entries = document.querySelectorAll(".entry-item");
 
 // Iterate over entries and add click listeners
 for (var i = 0; i < entries.length; i++) {
@@ -14,7 +15,7 @@ for (var i = 0; i < entries.length; i++) {
         });
     }else {
         entries[i].addEventListener("click", function (evt) {
-            // Toggle modal 
+            // Toggle modal
             showModal(evt);
         });
     }
@@ -37,9 +38,9 @@ var modal = document.getElementById("previewModal");
 // Function to show modal
 function showModal(frame) {
     modal.style.height = "100%";
-    console.log(frame.target)
-    modelFramePreviewImg.src=frame.target.src;
-    console.log(frame)
+    modelFramePreviewImg.src=frame.target.querySelector('img').src;
+    modalUserName.innerHTML = frame.target.querySelector('.insta_id').innerHTML;
+    modalUserLikes.innerHTML = frame.target.querySelector('#insta_likes').innerHTML
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");
