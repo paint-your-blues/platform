@@ -101,7 +101,6 @@
 .upvote-btn-container {
   width: 0;
   opacity: 0;
-  transition: 0.25s ease-in;
 }
 
 .leaderboard-list-item.active .upvote-btn-container {
@@ -111,19 +110,21 @@
 
 .upvote-btn {
   display: inline-block;
-  width: 0;
-  opacity: 0;
+  width: auto;
+  opacity: 1;
   min-height: 48px;
   font-size: 20px;
   line-height: 32px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-left: 0.5rem;
+  transition: 0.2s ease-in-out;
+  transform: translateX(300px);
 }
 
 .leaderboard-list-item.active .upvote-btn {
-  width: auto;
-  opacity: 1;
+  transition: 0.2s ease-in-out;
+  transform: translateX(0);
 }
 
 .leaderboard-preview-box {
