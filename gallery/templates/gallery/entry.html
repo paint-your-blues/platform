@@ -17,7 +17,7 @@
             <div class="col-sm-6 col-3 mb-4">
                 <div class="entry-item flex">
                     <img src="{{leader.thumbnail.url}}" class="img-fluid entry-thumbnail"> 
-                    <div class="entry-details">
+                    <div class="entry-details show-on-desktop">
                         <span style="float: right;">
                             <i class="fa fa-fw fa-heart text-smoke text-lighten"></i> 
                             <span class="text-smoke text-lighten" id="insta_likes"> {{leader.likes}} </span>
@@ -32,7 +32,6 @@
                         </div>
                         <span style="position: absolute; bottom: 0;">
                             <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
-                            <!-- <span class="rotated-text-standing text-orange paragraph-small">STANDING</span> -->
                             <span class="leaderboard-rank">
                                 {% if forloop.counter <= 9 %}
                                     0{{forloop.counter}}
