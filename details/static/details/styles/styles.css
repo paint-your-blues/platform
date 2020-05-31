@@ -57,14 +57,6 @@ nav ul a {
   }
 }
 
-#navbarCollapse {
-  display: none;
-}
-
-#navbarCollapse.active {
-  display: block;
-}
-
 .hide {
   display: none;
 }
@@ -114,6 +106,33 @@ nav {
   line-height: 32px;
   font-weight: bold;
   display: inline-block;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 99;
+  right: 0;
+  background: rgba(245, 233, 211, 0.85);
+}
+
+.sidenavContent {
+  padding-top: 3rem;
+  background-color: #3b261e;
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+
+.sidenav h4{
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin: 0;
 }
 
 .illustration-container {
