@@ -15,11 +15,12 @@ function scrollFunction() {
 //
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Navbar toggle function ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 
+var sidenav = document.getElementById("sidenav");
 function toggleNav() {
-  var x = document.getElementById("navbarCollapse");
-  if (x.className === "container") {
-    x.className += "container active";
-  } else {
-    x.className = "container";
+  sidenav.style.width = "100%";
+}
+window.onclick = function(event) {
+  if (event.target == sidenav) {
+    document.getElementById("sidenav").style.width = "0";
   }
 }

@@ -82,22 +82,6 @@
                         <h5 class="text-green">curators</h5>
                     </a>
                 </li> {% endcomment %}
-                <li class="show-on-desktop">
-                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
-                        target="_blank"
-                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-                        title="Share on Twitter" class="mr-4">
-                        <i class="fa fa-twitter text-green fa-lg"></i>
-                    </a>
-                </li>
-                <li class="show-on-desktop">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaintyourblues.com"
-                        target="_blank"
-                        onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-                        title="Share on Facebook">
-                        <i class="fa fa-facebook text-green fa-lg"></i>
-                    </a>
-                </li>
                 <li>
                 <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpaintyourblues.com&text=A%20poster%20campaign%20to%20create%20awareness%20on%20mental%20health.%20Contribute%20towards%20building%20an%20Open%20Source%20Graphic%20Library%20for%20global%20distribution.%20%23PaintYourBlues%20%23GraphicDesign%20%23MentalHealth"
                     target="_blank"
@@ -122,27 +106,27 @@
                 </li>
             </ul>
         </div>
-        <div class="container" id="navbarCollapse">
-            <div class="text-center">
-                <a href="{% url 'entry-page' %}" class="text-center nav-link">
-                    <h5 class="text-green">entries</h5>
-                </a>
-                <br>
-                <a href="{% url 'leader-page' %}" class="text-center nav-link">
-                    <h5 class="text-green">leaderboard</h5>
-                </a>
-                <br>
-                <a href="{% url 'about-page' %}" class="text-center nav-link">
-                    <h5 class="text-green">about</h5>
-                </a>
-                <br>
-                {% comment %} <a href="#" class="text-center nav-link hidden">
-                    <h5 class="text-green">curators</h5>
-                </a> {% endcomment %}
-                <hr class="mt-4 mb-0">
-            </div>
-        </div>
     </nav>
+    
+    <div id="sidenav" class="sidenav">
+        <div class="sidenavContent">
+            <a href="{% url 'entry-page' %}">
+                <h4 class="text-smoke">entries</h4>
+            </a>
+            <br>
+            <a href="{% url 'leader-page' %}">
+                <h4 class="text-smoke">leaderboard</h4>
+            </a>
+            <br>
+            <a href="{% url 'about-page' %}">
+                <h4 class="text-smoke">about</h4>
+            </a>
+            <br>
+            {% comment %} <a href="#">
+                <h4>curators</h4>
+            </a> {% endcomment %}
+        </div>
+    </div>
 
     {% block content %}{% endblock %}
 
