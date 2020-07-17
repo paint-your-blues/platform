@@ -14,7 +14,7 @@ class Gallery(models.Model):
                                   upload_to="thumbnails")
     post = models.CharField(max_length=1000, default="#")
     caption = models.TextField()
-    entry_id = models.IntegerField(default=0)
+    entry_id = models.CharField(max_length=15,default="PYBS010000")
     likes = models.IntegerField(default=0)
 
     def __str__(self):
