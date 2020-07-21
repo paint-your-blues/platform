@@ -19,8 +19,7 @@ def updateTheDB():
         'https://www.instagram.com/graphql/query/?query_id=17888483320059182&id=35443081985&first=12'
     )
     data = data.json()
-    for detail in data['data']['user']['edge_owner_to_timeline_media'][
-            'edges']:
+    for detail in data['data']['user']['edge_owner_to_timeline_media']['edges']:
         detail = detail['node']
         insta = re.findall(
             ": [\w]+",
