@@ -54,3 +54,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// Search function
+function search(username) {
+    console.log(username)
+}

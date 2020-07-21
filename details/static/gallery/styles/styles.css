@@ -278,3 +278,7 @@
   bottom: 0;
   right: 0;
 }
+
+.search-input {
+  float: right;
+}
