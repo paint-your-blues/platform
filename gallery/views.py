@@ -42,7 +42,7 @@ def updateTheDB():
 
 def LeaderBoardView(req):
     gallery = Gallery.objects.all().order_by('-likes')[:20]
-    # t1 = threading.Thread(target=updateTheDB)
-    # t1.start()
+    t1 = threading.Thread(target=updateTheDB)
+    t1.start()
     context = {'leaderboard': gallery}
     return render(req, 'gallery/leaderboard.html', context)
