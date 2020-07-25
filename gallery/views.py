@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db import transaction
 from .models import Gallery
 import requests
 import threading
