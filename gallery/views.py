@@ -26,7 +26,7 @@ def updateTheDB():
             caption = detail['edge_media_to_caption']['edges'][0]['node']['text'][:10]
             code = detail['shortcode']
             likes = detail['edge_media_preview_like']['count']
-            li[caption] = "https://www.instagram.com/p/"+code+"/"
+            entries[caption] = "https://www.instagram.com/p/"+code+"/"
 
         pointer = data['data']['user']['edge_owner_to_timeline_media']['page_info']
         if(pointer['has_next_page']):
