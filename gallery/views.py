@@ -36,7 +36,7 @@ def updateTheDB():
             break
 
     with transaction.atomic():
-        for entry,link in entries:
+        for entry,link in entries.items():
             Gallery.objects.filter(entry_id=entry).update(post=link)
     
 
