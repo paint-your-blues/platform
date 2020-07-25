@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Gallery
 import requests
-import re
 import threading
 import random
 
@@ -15,18 +14,30 @@ def EntryPageView(req):
 
 
 def updateTheDB():
-    data = requests.get(
-        'https://www.instagram.com/graphql/query/?query_id=17888483320059182&id=35443081985&first=12'
-    )
-    data = data.json()
-    for detail in data['data']['user']['edge_owner_to_timeline_media']['edges']:
-        detail = detail['node']
-        insta = re.findall(
-            ": [\w]+",
-            detail['edge_media_to_caption']['edges'][0]['node']['text'])[0]
-        gallery = Gallery.objects.get(insta_id=insta[2:])
-        gallery.likes = detail['edge_media_preview_like']['count']
-        gallery.save()
+    cursor=""
+    entries={}
+    while True:
+        n=0
+        data = requests.get('https://www.instagram.com/graphql/query/?query_id=17888483320059182&id=39236369448&first=50&after='+cursor)
+        data = data.json()
+
+        for detail in data['data']['user']['edge_owner_to_timeline_media']['edges']:
+            detail = detail['node']
+            caption = detail['edge_media_to_caption']['edges'][0]['node']['text'][:10]
+            code = detail['shortcode']
+            likes = detail['edge_media_preview_like']['count']
+            li[caption] = "https://www.instagram.com/p/"+code+"/"
+
+        pointer = data['data']['user']['edge_owner_to_timeline_media']['page_info']
+        if(pointer['has_next_page']):
+            cursor = pointer['end_cursor']
+        else:
+            break
+
+    with transaction.atomic():
+        for entry,link in entries:
+            Gallery.objects.filter(entry_id=entry).update(post=link)
+    
 
 
 def LeaderBoardView(req):
