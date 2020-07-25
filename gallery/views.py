@@ -25,9 +25,8 @@ def updateTheDB():
         for detail in data['data']['user']['edge_owner_to_timeline_media']['edges']:
             detail = detail['node']
             caption = detail['edge_media_to_caption']['edges'][0]['node']['text'][:10]
-            code = detail['shortcode']
             likes = detail['edge_media_preview_like']['count']
-            entries[caption] = "https://www.instagram.com/p/"+code+"/"
+            entries[caption] = likes
 
         pointer = data['data']['user']['edge_owner_to_timeline_media']['page_info']
         if(pointer['has_next_page']):
@@ -36,14 +35,15 @@ def updateTheDB():
             break
 
     with transaction.atomic():
-        for entry,link in entries.items():
-            Gallery.objects.filter(entry_id=entry).update(post=link)
+        for entry,likes in entries.items():
+            Gallery.objects.filter(entry_id=entry).update(likes=likes)
     
 
 
 def LeaderBoardView(req):
+    updateTheDB()
     gallery = Gallery.objects.all().order_by('-likes')[:20]
-    t1 = threading.Thread(target=updateTheDB)
-    t1.start()
+    # t1 = threading.Thread(target=updateTheDB)
+    # t1.start()
     context = {'leaderboard': gallery}
     return render(req, 'gallery/leaderboard.html', context)
