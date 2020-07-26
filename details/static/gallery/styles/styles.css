@@ -30,6 +30,12 @@
   pointer-events: none;
 }
 
+.leaderboard-list-item .upvote-btn-container {
+  pointer-events: auto;
+}
+
+
+
 .leaderboard-list-item.active {
   background-color: #fff;
   box-shadow: 0px 5px 19px rgba(59, 38, 30, 0.1);

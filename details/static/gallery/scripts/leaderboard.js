@@ -58,6 +58,7 @@ function showModal(frame) {
     document.querySelector("#modal_username").innerHTML=frame.target.querySelector('#insta_id').innerHTML;
     document.querySelector("#modal_likes").innerHTML=frame.target.querySelector('#insta_likes').innerHTML;
     document.querySelector(".modal-content .leaderboard-rank").innerHTML=frame.target.querySelector('.leaderboard-rank').innerHTML
+    document.querySelector(".modal-content a").href = frame.target.querySelector(".upvote-btn-container a").href
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");
