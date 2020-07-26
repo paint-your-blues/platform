@@ -5,6 +5,7 @@ var modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
 var modalUserName = document.querySelector("#modal_username");
 var modalUserLikes = document.querySelector("#modal_likes");
 var modalLeaderboardRank = document.querySelector(".modal-content .leaderboard-rank")
+var modalUpVote = document.querySelector(".modal-content a")
 var entries = document.querySelectorAll(".entry-item");
 
 // Iterate over entries and add click listeners
@@ -43,6 +44,7 @@ function showModal(frame) {
     modalUserName.innerHTML = frame.target.querySelector('.insta_id').innerHTML;
     modalUserLikes.innerHTML = frame.target.querySelector('#insta_likes').innerHTML
     modalLeaderboardRank.innerHTML = frame.target.querySelector('.leaderboard-rank').innerHTML
+    modalUpVote.href = frame.target.querySelector("#upvote-link")
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");

@@ -31,8 +31,10 @@
                             {% endif %}
                         </span>
                     </div>
-                    <div class="upvote-btn-container" target="_blank">
-                        <button class="btn btn-green upvote-btn">upvote</button>
+                    <div class="upvote-btn-container">
+                        <a href="{{leader.post}}" target="_blank">
+                            <button class="btn btn-green upvote-btn">upvote</button>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
