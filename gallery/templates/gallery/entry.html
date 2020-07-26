@@ -36,10 +36,12 @@
                         <span style="position: absolute; bottom: 0;">
                             <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
                             <span class="leaderboard-rank">
-                                {% if forloop.counter <= 9 %}
-                                    0{{forloop.counter}}
+                                {% if leader.standing <= 9 %}
+                                    00{{leader.standing}}
+                                {% elif leader.standing <= 99 %}
+                                    0{{leader.standing}}
                                 {% else %}
-                                    {{forloop.counter}}
+                                    {{leader.standing}}
                                 {% endif %}
                             </span>
                         </span>
