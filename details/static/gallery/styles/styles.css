@@ -226,7 +226,7 @@
   position: relative;
 }
 
-.entry-item > * {
+.entry-item img{
   pointer-events: none;
 }
 

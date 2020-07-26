@@ -4,6 +4,7 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var modelFramePreviewImg=document.querySelector('#modelFramePreviewImg');
 var modalUserName = document.querySelector("#modal_username");
 var modalUserLikes = document.querySelector("#modal_likes");
+var modalLeaderboardRank = document.querySelector(".modal-content .leaderboard-rank")
 var entries = document.querySelectorAll(".entry-item");
 
 // Iterate over entries and add click listeners
@@ -41,6 +42,7 @@ function showModal(frame) {
     modelFramePreviewImg.src=frame.target.querySelector('img').src;
     modalUserName.innerHTML = frame.target.querySelector('.insta_id').innerHTML;
     modalUserLikes.innerHTML = frame.target.querySelector('#insta_likes').innerHTML
+    modalLeaderboardRank.innerHTML = frame.target.querySelector('.leaderboard-rank').innerHTML
 }
 // Modal close btn
 var modalCloseBtn = document.getElementById("modalCloseBtn");
