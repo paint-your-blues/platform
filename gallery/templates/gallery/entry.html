@@ -37,15 +37,15 @@
                             <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
                             <span class="leaderboard-rank">
                                 {% if leader.standing <= 9 %}
-                                    00{{leader.standing}}
-                                {% elif leader.standing <= 99 %}
                                     0{{leader.standing}}
                                 {% else %}
                                     {{leader.standing}}
                                 {% endif %}
                             </span>
                         </span>
-                        <button class="btn btn-upvote-entry btn-green">upvote</button>
+                        <a href="{{leader.post}}">
+                            <button class="btn btn-upvote-entry btn-green">upvote</button>
+                        </a>   
                     </div>
                 </div>
             </div>
