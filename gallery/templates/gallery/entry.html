@@ -31,7 +31,9 @@
                             <span class="paragraph-small text-weight-bold text-smoke insta_id">{{leader.insta_id}}</span>
                         </div>
                         <div class="paragraph-small text-smoke text-lighten">
-                            {{ leader.caption|truncatechars:120 }}
+                            {% if leader.caption != '#' %}
+                                {{ leader.caption|truncatechars:120 }}
+                            {% endif %}
                         </div>
                         <span style="position: absolute; bottom: 0;">
                             <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
