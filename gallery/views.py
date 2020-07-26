@@ -8,7 +8,9 @@ import random
 
 # Create your views here.
 def EntryPageView(req):
-    gallery = (list(Gallery.objects.all()))
+    gallery = (list(Gallery.objects.all().order_by('-likes')))
+    for index,val in enumerate(gallery):
+        val.standing=index
     random.shuffle(gallery)
     context = {'leaderboard': gallery}
     return render(req, 'gallery/entry.html', context)
