@@ -8,7 +8,7 @@ import random
 
 # Create your views here.
 def EntryPageView(req):
-    gallery = (list(Gallery.objects.all().order_by('-likes')))
+    gallery = (list(Gallery.objects.exclude(entry_id="0").order_by('-likes')))
     for index,val in enumerate(gallery):
         val.standing=index
     random.shuffle(gallery)
