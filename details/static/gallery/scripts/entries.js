@@ -14,7 +14,7 @@ var galleryJSON = null;
 
 function handleJSON(data) {
   galleryJSON = data.gallery;
-  console.log(galleryJSON);
+  // Iterate over entries and append HTML 
   for (const el of galleryJSON) {
     var clone = template.content.cloneNode(true);
     clone.querySelector("#insta_likes").textContent = el.likes;
@@ -37,6 +37,8 @@ function handleJSON(data) {
   }
   // Add event listeners to items 
   addEventListeners();
+  // Hide loading icon 
+  document.querySelector("#loading-icon").style.display = "none";
 }
 
 window.onload = function () {
