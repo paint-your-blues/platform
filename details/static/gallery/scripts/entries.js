@@ -8,7 +8,6 @@ var modalLeaderboardRank = document.querySelector(
   ".modal-content .leaderboard-rank",
 );
 var modalUpVote = document.querySelector(".modal-content a");
-var entries = document.querySelectorAll(".entry-item");
 var content = document.querySelector("#content");
 var template = document.querySelector("template");
 var galleryJSON = null;
@@ -23,13 +22,19 @@ function handleJSON(data) {
     clone.querySelector("#insta_id").textContent = el.insta_id;
     clone.querySelector("a").href = el.post;
     clone.querySelector(".leaderboard-rank").textContent = el.standing;
-    clone.querySelector("#caption").textContent = el.caption === "#"
-      ? " "
-      : el.caption;
+    // Trim caption to 120 char 
+    if(el.caption.length>120) {
+      clone.querySelector("#caption").textContent = el.caption.substring(0,120) + '...'  
+    }else if(el.caption==='#'){
+      clone.querySelector("#caption").textContent = "";  
+    }else {
+      clone.querySelector("#caption").textContent = el.caption
+    }
     var img = clone.querySelectorAll("#thumbs");
     img[0].src = el.thumbnail;
     img[1].src = el.thumbnail;
     content.appendChild(clone);
+    addEventListeners();
   }
 }
 
@@ -42,25 +47,30 @@ window.onload = function () {
     .catch((err) => console.log(err));
 };
 
-// Iterate over entries and add click listeners
-for (var i = 0; i < entries.length; i++) {
-  if (width > 1024) {
-    entries[i].addEventListener("mouseenter", function (evt) {
+function addEventListeners() {
+  var entries = document.querySelectorAll(".entry-item");
+  // Iterate over entries and add click listeners
+  for (var i = 0; i < entries.length; i++) {
+    if (width > 1024) {
+      entries[i].addEventListener("mouseenter", function (evt) {
+        setItemsInactive();
+        this.classList.add("active");
+      });
+    } else {
+      entries[i].addEventListener("click", function (evt) {
+        // Toggle modal
+        showModal(evt);
+      });
+    }
+    entries[i].addEventListener("mouseleave", function (evt) {
       setItemsInactive();
-      this.classList.add("active");
-    });
-  } else {
-    entries[i].addEventListener("click", function (evt) {
-      // Toggle modal
-      showModal(evt);
     });
   }
-  entries[i].addEventListener("mouseleave", function (evt) {
-    setItemsInactive();
-  });
 }
+
 // Reset active state of all items
 function setItemsInactive() {
+  var entries = document.querySelectorAll(".entry-item");
   for (var i = 0; i < entries.length; i++) {
     entries[i].classList.remove("active");
   }
