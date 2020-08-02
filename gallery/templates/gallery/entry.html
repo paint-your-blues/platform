@@ -15,44 +15,33 @@
             </p>
         </div>
     </div> 
-    <div class="row">
-        {% for leader in leaderboard %}
-            <div class="col-sm-6 col-3 mb-4">
-                <div class="entry-item flex">
-                    <img src="{{leader.thumbnail.url}}" class="img-fluid entry-thumbnail"> 
-                    <div class="entry-details show-on-desktop">
-                        <span style="float: right;">
-                            <i class="fa fa-fw fa-heart text-smoke text-lighten"></i> 
-                            <span class="text-smoke text-lighten" id="insta_likes"> {{leader.likes}} </span>
-                        </span>
-                        <img src="{{leader.thumbnail.url}}" class="img-fluid mb-2" style="width: 25%; border-radius: 8px;"> 
-                        <div class="flex mb-2" style="align-items: center;">
-                            <img src="{{leader.profile_pic.url}}" class="img-fluid mr-2" style="width: 12.5%; border-radius: 50%;"> 
-                            <span class="paragraph-small text-weight-bold text-smoke insta_id">{{leader.insta_id}}</span>
-                        </div>
-                        <div class="paragraph-small text-smoke text-lighten">
-                            {% if leader.caption != '#' %}
-                                {{ leader.caption|truncatechars:120 }}
-                            {% endif %}
-                        </div>
-                        <span style="position: absolute; bottom: 0;">
-                            <img src={% static "gallery/assets/standing.svg" %} alt="standing" class="mr-1">
-                            <span class="leaderboard-rank">
-                                {% if leader.standing <= 9 %}
-                                    0{{leader.standing}}
-                                {% else %}
-                                    {{leader.standing}}
-                                {% endif %}
-                            </span>
-                        </span>
-                        <a href="{{leader.post}}" id="upvote-link"  target="_blank">
-                            <button class="btn btn-upvote-entry btn-green">upvote</button>
-                        </a>   
+    <div id="content" class="row"></div>
+    <template>
+        <div class="col-sm-6 col-3 mb-4">
+            <div class="entry-item flex">
+                <img id="thumbs" class="img-fluid entry-thumbnail"> 
+                <div class="entry-details show-on-desktop">
+                    <span style="float: right;">
+                        <i class="fa fa-fw fa-heart text-smoke text-lighten"></i> 
+                        <span class="text-smoke text-lighten" id="insta_likes"></span>
+                    </span>
+                    <img id="thumbs" class="img-fluid mb-2" style="width: 25%; border-radius: 8px;"> 
+                    <div class="flex mb-2" style="align-items: center;">
+                        <img id="profile_pic" class="img-fluid mr-2" style="width: 12.5%; border-radius: 50%;"> 
+                        <span id="insta_id" class="paragraph-small text-weight-bold text-smoke insta_id"></span>
                     </div>
+                    <div class="paragraph-small text-smoke text-lighten" id="caption"></div>
+                    <span style="position: absolute; bottom: 0;">
+                        <img src={% static "gallery/assets/standing.svg" %} id="standing" alt="standing" class="mr-1">
+                        <span class="leaderboard-rank"></span>
+                    </span>
+                    <a id="upvote-link"  target="_blank">
+                        <button class="btn btn-upvote-entry btn-green">upvote</button>
+                    </a>   
                 </div>
             </div>
-        {% endfor %}
-    </div>
+        </div>
+    </template>
 </div>
 
 <!-- Preview modal  -->

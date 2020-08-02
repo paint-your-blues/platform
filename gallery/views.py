@@ -25,7 +25,7 @@ def GalleryJSON(req):
         gallery.append({
             "standing": index,
             "profile": val.profile_pic.url,
-            "thumbnail": val.thumbnail,
+            "thumbnail": val.thumbnail.url,
             "insta_id": val.insta_id,
             "post": val.post,
             "entry_id": val.entry_id,
