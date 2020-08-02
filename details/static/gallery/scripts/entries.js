@@ -34,8 +34,9 @@ function handleJSON(data) {
     img[0].src = el.thumbnail;
     img[1].src = el.thumbnail;
     content.appendChild(clone);
-    addEventListeners();
   }
+  // Add event listeners to items 
+  addEventListeners();
 }
 
 window.onload = function () {
