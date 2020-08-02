@@ -104,6 +104,15 @@
   -webkit-text-stroke-color: #cc6633;
 }
 
+.upvote-btn-container { 
+  display: none;
+}
+@media (min-width: 1024px) {
+  .upvote-btn-container { 
+    display: block;
+  }
+}
+
 .upvote-btn-container {
   width: 0;
   opacity: 0;
