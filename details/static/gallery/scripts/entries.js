@@ -110,5 +110,25 @@ window.onclick = function (event) {
 
 // Search function
 function search(username) {
-  console.log(username);
+  // Hide empty text
+  document.querySelector("#search-empty-text").style.display = "none" 
+  // Get entries
+  var entries = document.querySelectorAll(".col-sm-6");
+  // Flag for checking at least one entry 
+  let search = false;
+  // Iterate over entries 
+  for (var i = 0; i < entries.length; i++) {
+    // Check if username matches 
+    if(entries[i].querySelector("#insta_id").textContent.includes(username)) {
+      entries[i].style.display = "block";
+      // Set flag 
+      search = true;     
+    }else {
+      entries[i].style.display = "none";     
+    }
+  }
+  // Show empty text if no entries 
+  if(!search) {
+    document.querySelector("#search-empty-text").style.display = "block" 
+  }
 }

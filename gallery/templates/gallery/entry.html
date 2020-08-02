@@ -7,7 +7,10 @@
         <div class="col-1"></div>
         <div class="col-10">
             <h2 class="m-0" id="leaderboardTitle">
-                <input type="text" class="search-input" placeholder="Search by username" oninput="search(event.target.value)">
+                <span class="search-input-wrapper">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="search-input" placeholder="search username" oninput="search(event.target.value)">
+                </span>
                 shortlisted
             </h2>
             <p class="m-0 mb-4 paragraph-small">
@@ -46,6 +49,11 @@
         <i class="fa fa-spinner fa-pulse fa-2x fa-fw text-orange mb-2"></i>
         <br>
         <span class="text-weight-bold text-orange">loading</span>
+    </div>
+    <div class="text-center hidden" id="search-empty-text">
+        <i class="fa fa-exclamation fa-2x fa-fw text-orange mb-2"></i>
+        <br>
+        <span class="text-weight-bold text-orange">no entries found</span>
     </div>
 </div>
 
