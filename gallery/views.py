@@ -55,8 +55,11 @@ def updateTheDB():
         for detail in data['data']['user']['edge_owner_to_timeline_media'][
                 'edges']:
             detail = detail['node']
-            caption = detail['edge_media_to_caption']['edges'][0]['node'][
-                'text'][:10]
+            try:
+                caption = detail['edge_media_to_caption']['edges'][0]['node'][
+                    'text'][:10]
+            except:
+                caption = ""
             likes = detail['edge_media_preview_like']['count']
             entries[caption] = likes
 
