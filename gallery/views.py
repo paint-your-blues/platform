@@ -76,7 +76,7 @@ def updateTheDB():
 
 
 def LeaderBoardView(req):
-    updateTheDB()
+    # updateTheDB()
     gallery = Gallery.objects.all().order_by('-likes')[:20]
     # t1 = threading.Thread(target=updateTheDB)
     # t1.start()
