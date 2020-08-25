@@ -104,6 +104,15 @@
   -webkit-text-stroke-color: #cc6633;
 }
 
+.upvote-btn-container { 
+  display: none;
+}
+@media (min-width: 1024px) {
+  .upvote-btn-container { 
+    display: block;
+  }
+}
+
 .upvote-btn-container {
   width: 0;
   opacity: 0;
@@ -285,7 +294,44 @@
   right: 0;
 }
 
-.search-input {
-  float: right;
+.search-input-wrapper{
   display: none;
+}
+
+#search-empty-text {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .search-input-wrapper {
+    display: block;
+    float: right;
+    border-radius: 48px;
+    background-color: #7A7E2E;
+    padding-left: 20px;
+  }
+
+  .search-input-wrapper i{
+    font-size: 20px;
+    line-height: 48px; 
+    color: #F5E9D3;
+  }
+  
+  .search-input {
+    border-radius: 48px;
+    background-color: #7A7E2E;
+    border: none;
+    font-size: 20px;
+    line-height: 48px; 
+    color: #F5E9D3;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  ::placeholder { 
+    color: #F5E9D3;
+    opacity: 0.4;
+  }
 }

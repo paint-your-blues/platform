@@ -8,14 +8,13 @@ var modalLeaderboardRank = document.querySelector(
   ".modal-content .leaderboard-rank",
 );
 var modalUpVote = document.querySelector(".modal-content a");
-var entries = document.querySelectorAll(".entry-item");
 var content = document.querySelector("#content");
 var template = document.querySelector("template");
 var galleryJSON = null;
 
 function handleJSON(data) {
   galleryJSON = data.gallery;
-  console.log(galleryJSON);
+  // Iterate over entries and append HTML 
   for (const el of galleryJSON) {
     var clone = template.content.cloneNode(true);
     clone.querySelector("#insta_likes").textContent = el.likes;
@@ -23,14 +22,23 @@ function handleJSON(data) {
     clone.querySelector("#insta_id").textContent = el.insta_id;
     clone.querySelector("a").href = el.post;
     clone.querySelector(".leaderboard-rank").textContent = el.standing;
-    clone.querySelector("#caption").textContent = el.caption === "#"
-      ? " "
-      : el.caption;
+    // Trim caption to 120 char 
+    if(el.caption.length>120) {
+      clone.querySelector("#caption").textContent = el.caption.substring(0,120) + '...'  
+    }else if(el.caption==='#'){
+      clone.querySelector("#caption").textContent = "";  
+    }else {
+      clone.querySelector("#caption").textContent = el.caption
+    }
     var img = clone.querySelectorAll("#thumbs");
     img[0].src = el.thumbnail;
     img[1].src = el.thumbnail;
     content.appendChild(clone);
   }
+  // Add event listeners to items 
+  addEventListeners();
+  // Hide loading icon 
+  document.querySelector("#loading-icon").style.display = "none";
 }
 
 window.onload = function () {
@@ -42,25 +50,30 @@ window.onload = function () {
     .catch((err) => console.log(err));
 };
 
-// Iterate over entries and add click listeners
-for (var i = 0; i < entries.length; i++) {
-  if (width > 1024) {
-    entries[i].addEventListener("mouseenter", function (evt) {
+function addEventListeners() {
+  var entries = document.querySelectorAll(".entry-item");
+  // Iterate over entries and add click listeners
+  for (var i = 0; i < entries.length; i++) {
+    if (width > 1024) {
+      entries[i].addEventListener("mouseenter", function (evt) {
+        setItemsInactive();
+        this.classList.add("active");
+      });
+    } else {
+      entries[i].addEventListener("click", function (evt) {
+        // Toggle modal
+        showModal(evt);
+      });
+    }
+    entries[i].addEventListener("mouseleave", function (evt) {
       setItemsInactive();
-      this.classList.add("active");
-    });
-  } else {
-    entries[i].addEventListener("click", function (evt) {
-      // Toggle modal
-      showModal(evt);
     });
   }
-  entries[i].addEventListener("mouseleave", function (evt) {
-    setItemsInactive();
-  });
 }
+
 // Reset active state of all items
 function setItemsInactive() {
+  var entries = document.querySelectorAll(".entry-item");
   for (var i = 0; i < entries.length; i++) {
     entries[i].classList.remove("active");
   }
@@ -97,5 +110,25 @@ window.onclick = function (event) {
 
 // Search function
 function search(username) {
-  console.log(username);
+  // Hide empty text
+  document.querySelector("#search-empty-text").style.display = "none" 
+  // Get entries
+  var entries = document.querySelectorAll(".col-sm-6");
+  // Flag for checking at least one entry 
+  let search = false;
+  // Iterate over entries 
+  for (var i = 0; i < entries.length; i++) {
+    // Check if username matches 
+    if(entries[i].querySelector("#insta_id").textContent.includes(username)) {
+      entries[i].style.display = "block";
+      // Set flag 
+      search = true;     
+    }else {
+      entries[i].style.display = "none";     
+    }
+  }
+  // Show empty text if no entries 
+  if(!search) {
+    document.querySelector("#search-empty-text").style.display = "block" 
+  }
 }
